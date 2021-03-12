@@ -5,6 +5,13 @@
   "configurations": [
     {
         "type": "java",
+        "name": "CodeLens (Launch) - Company",
+        "request": "launch",
+        "mainClass": "hu.sonrisa.interju.Company",
+        "projectName": "interju_3b15f35e"
+    },
+    {
+        "type": "java",
         "name": "1. - FizzBuzz",
         "request": "launch",
         "mainClass": "hu.sonrisa.interju.FizzBuzz",

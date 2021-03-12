@@ -13,7 +13,26 @@ public class BinaryConverter {
     // 1  -> 00000001
     // -1 -> 10000001
     public String ConvertToBinaryString(Byte number) {
-        return "";
+        if (number == null)
+            return "";
+        String text = "";
+        int value = Math.abs(number % 2);
+        text = Integer.toString(value) + text;
+        int rest =  Math.abs(number / 2);
+        while (rest > 0) {
+            value = rest % 2;
+            text = Integer.toString(value) + text;
+            rest =  Math.abs(rest / 2);
+        }
+        while (text.length() < 7) {
+            text = "0" + text;
+        }
+        if (number < 0) {
+            text = "1" + text;
+        }else if (number >= 0) {
+            text = "0" + text;
+        }
+        return text;
     }
 
     public static void main(String[] args) {
