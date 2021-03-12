@@ -1,10 +1,8 @@
 package hu.sonrisa.interju;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class TwoMax {
     
+    // A paraméterben megkapott tömbből ki kell íratni a két legnagyobb számot.
     public void PrintTwoLargestNumber(int[] numbers) {
 
     }
@@ -12,6 +10,7 @@ public class TwoMax {
     public static void main(String[] args) {
         TwoMax twomax = new TwoMax();
         
+        twomax.PrintTwoLargestNumber(new int[]{1,4,8,9});
         twomax.PrintTwoLargestNumber(new int[]{-5,30,1,2,3,15,10,20});
         twomax.PrintTwoLargestNumber(new int[]{5,-30,-1,-2,-3,-15,-10,-20});
     }
