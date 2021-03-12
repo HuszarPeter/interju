@@ -5,16 +5,37 @@
   "configurations": [
     {
       "type": "java",
-      "name": "Debug (Launch) - Current File",
+      "name": "Launch TwoMax",
+      "request": "launch",
+      "mainClass": "hu.sonrisa.interju.TwoMax",
+      "projectName": "interju_6337bd58"
+  },
+  {
+      "type": "java",
+      "name": "Launch BinaryConverter",
+      "request": "launch",
+      "mainClass": "hu.sonrisa.interju.BinaryConverter",
+      "projectName": "interju_6337bd58"
+  },
+  {
+      "type": "java",
+      "name": "Launch FizzBuzz",
+      "request": "launch",
+      "mainClass": "hu.sonrisa.interju.FizzBuzz",
+      "projectName": "interju_6337bd58"
+  },
+  {
+      "type": "java",
+      "name": "Launch Current File",
       "request": "launch",
       "mainClass": "${file}"
-    },
-    {
+  },
+  {
       "type": "java",
-      "name": "Debug (Launch)-Main<interju_3b15f35e>",
+      "name": "Launch Main",
       "request": "launch",
       "mainClass": "hu.sonrisa.interju.Main",
-      "projectName": "interju_3b15f35e"
-    }
+      "projectName": "interju_6337bd58"
+  }
   ]
 }
