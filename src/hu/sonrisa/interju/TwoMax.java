@@ -2,7 +2,7 @@ package hu.sonrisa.interju;
 
 public class TwoMax {
     
-    // A paraméterben megkapott tömbből ki kell íratni a két legnagyobb számot.
+    // Írasd ki a paraméterben megkapott integereket tartalmazó tömbből a két legnagyobb számot.
     public void PrintTwoLargestNumber(int[] numbers) {
 
     }

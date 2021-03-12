@@ -16,7 +16,6 @@ public class BinaryConverter {
         return "";
     }
 
-
     public static void main(String[] args) {
         BinaryConverter converter = new BinaryConverter();
 

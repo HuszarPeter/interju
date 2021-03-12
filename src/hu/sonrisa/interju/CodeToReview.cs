@@ -23,28 +23,28 @@ namespace CsharpInterview.ConsoleApp
 
         // ...
 
-        public async void ExtractMrz( // async void kerülendő
-            ImageDescriptor imageDescriptor, // null check
+        public async void ExtractMrz(
+            ImageDescriptor imageDescriptor,
             IEnumerable<Field> fields,
-            ImmutableDictionary<string, object> values) // object helyett valami pontosabb
+            ImmutableDictionary<string, object> values) 
         {
-            if (!cache.TryGetValue(imageDescriptor.ImageClassifier, out var result)) // var helyett JObject, mert olvashatóbb
+            if (!cache.TryGetValue(imageDescriptor.ImageClassifier, out var result)) 
             {
                 var extractionResult =
                     await LocalMrzReader
                         .Extract(
                             imageDescriptor.Bitmap)
-                        .ConfigureAwait(true); // indokolt ez?
+                        .ConfigureAwait(true); 
 
-                if (!IsNotNullNorEmpty(extractionResult)) // egyszerűbben
+                if (!IsNotNullNorEmpty(extractionResult)) 
                 {
-                    cache.Add(imageDescriptor.ImageClassifier, null); // miért teszünk cache-be null-t?
+                    cache.Add(imageDescriptor.ImageClassifier, null); 
                     return;
                 }
 
                 result = JObject.Parse(extractionResult);
                 cache.Add(imageDescriptor.ImageClassifier, result);
-            } // idáig extract class
+            } 
 
             if (result is null)
             {
